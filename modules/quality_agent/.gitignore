@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.venv/
+venv/
+
+outputs/
+*.npy
+*.sha256.txt
+
+models/
+
+.DS_Store

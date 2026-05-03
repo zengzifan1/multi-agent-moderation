@@ -1,0 +1,5 @@
+[
+  {"id": "R001", "level": "high", "category": "illegal", "keyword": "illegal", "platforms": ["demo"]},
+  {"id": "R002", "level": "medium", "category": "marketing", "keyword": "free", "platforms": ["demo"]},
+  {"id": "R003", "level": "low", "category": "exaggeration", "keyword": "best"}
+]

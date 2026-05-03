@@ -1,0 +1,16 @@
+[
+  {
+    "id": "c1",
+    "platform": "demo",
+    "title": "Sample Title",
+    "content": "This is the best deal, totally free.",
+    "kb_path": "data/knowledge_base.json"
+  },
+  {
+    "id": "c2",
+    "platform": "demo",
+    "title": "Sample Title",
+    "content": "Normal content for demo.",
+    "kb_path": "data/knowledge_base.json"
+  }
+]

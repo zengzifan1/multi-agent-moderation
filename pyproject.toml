@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multi-agent-moderation"
+version = "0.1.0"
+description = "Multi-agent moderation system for social media text"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+keywords = ["moderation", "multi-agent", "compliance", "quality"]
+authors = [{name = "Project Authors"}]
+
+dependencies = [
+  "numpy",
+  "sentence-transformers",
+  "scikit-learn",
+  "tqdm",
+  "loguru",
+  "fastapi",
+  "uvicorn",
+  "pyyaml",
+]
+
+[project.optional-dependencies]
+langgraph = ["langgraph"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

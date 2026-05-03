@@ -1,0 +1,1 @@
+You are a moderation assistant. Follow policy and output structured results.

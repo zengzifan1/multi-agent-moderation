@@ -1,0 +1,9 @@
+numpy
+sentence-transformers
+scikit-learn
+tqdm
+loguru
+langgraph
+fastapi
+uvicorn
+pyyaml

@@ -20,6 +20,53 @@
 ## 文档
 
 - 项目概览：docs/00-项目概览.md
+- 技术选型（Coze → 本地开源）：docs/01-技术选型.md
+- QualityAgent 接入（LangChain/LangGraph）：docs/02-QualityAgent接入LangChain与LangGraph.md
+- 质量模块文档：modules/quality_agent/docs/README.md
+- 合规模块文档：modules/compliance_agent/docs/README.md
+- 复核模块文档：modules/review_agent/docs/README.md
+
+## 快速开始（集中说明）
+
+### 1) 安装依赖
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2) 运行最小流程
+
+```bash
+python -m multi_agent_moderation.examples.run_demo
+```
+
+### 3) 使用 LangGraph 编排（可选）
+
+```bash
+pip install langgraph
+python -m multi_agent_moderation.examples.run_langgraph_demo
+```
+
+## 可复现与工程化说明（简要）
+
+- src 层通过 tools 动态加载 modules 目录，便于保持模块独立演进。
+- 质量模块默认读取 modules/quality_agent/data 中的 JSON，并将结果写入 outputs；可通过 `ModerationItem.meta` 传入 `batch_path/history_path/output_path` 覆盖。
+- 统一输出与落盘入口在 `multi_agent_moderation.pipeline` 与 `multi_agent_moderation.tools`。
+
+## 生产级工程化细节（简要）
+
+- 环境变量：`MAM_OUTPUT_DIR`、`MAM_AUDIT_LOG_PATH`、`MAM_COMPLIANCE_RULES_PATH`、`MAM_COMPLIANCE_KB_PATH`、`MAM_REVIEW_REPLACEMENT_RULES_PATH`、`MAM_QUALITY_OUTPUT_PATH`
+- 审计落盘：使用 `pipeline.run_item_and_audit` / `run_batch_and_audit` 输出 JSONL
+- 模型路径：质量模块依赖本地模型目录，可通过 `QUALITY_AGENT_MODEL_DIR` 配置
+- 服务化（可选）：`uvicorn multi_agent_moderation.service.app:app --host 0.0.0.0 --port 8000`
+- 任务队列（可选）：`/moderate/async` + `/jobs/{job_id}` 使用内置轻量队列
+
+## 代码结构（专业化布局）
+
+- src/multi_agent_moderation/: 核心编排与工具封装
+- modules/quality_agent/: 现有质量智能体实现（独立模块，后续通过 tools 适配）
+- modules/compliance_agent/: 合规智能体实现（规则优先，可扩展 RAG/LLM）
+- modules/review_agent/: 人机协同与复核路由实现
 
 ## 安全与合规
 
@@ -28,4 +75,4 @@
 
 ## License
 
-将补充开源许可证文件（MIT 或 Apache-2.0）。
+MIT License，见 LICENSE。

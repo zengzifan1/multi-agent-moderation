@@ -1,0 +1,4 @@
+[
+  {"category": "marketing", "original": "free", "replacement": "[promotion]", "reason": "avoid misleading offers"},
+  {"category": "exaggeration", "original": "best", "replacement": "better", "reason": "tone down exaggeration"}
+]

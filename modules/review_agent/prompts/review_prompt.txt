@@ -1,0 +1,2 @@
+Given compliance and quality signals, decide review routing and suggest edits.
+Output a structured payload with risk level, reasons, and replacement hints.

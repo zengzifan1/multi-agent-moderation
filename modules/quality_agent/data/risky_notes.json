@@ -1,0 +1,7 @@
+{
+  "synthetic_cases": [
+    {"id": 1, "content": "示例文本：包含夸张用语，需要人工复核。", "platform": "demo"},
+    {"id": 2, "content": "示例文本：包含可疑广告表达，需要标注。", "platform": "demo"},
+    {"id": 3, "content": "示例文本：包含重复营销句式。", "platform": "demo"}
+  ]
+}

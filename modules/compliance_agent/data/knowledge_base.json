@@ -1,0 +1,14 @@
+[
+  {
+    "doc": "policy_demo",
+    "chunk_id": "p1",
+    "text": "Do not use exaggerated claims like 'best' or 'guarantee'.",
+    "tags": ["exaggeration", "marketing"]
+  },
+  {
+    "doc": "policy_demo",
+    "chunk_id": "p2",
+    "text": "Avoid offering free items as a misleading promotion.",
+    "tags": ["marketing"]
+  }
+]

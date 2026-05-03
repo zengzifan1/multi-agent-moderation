@@ -1,0 +1,13 @@
+输入：
+
+[
+  {"id": 1, "content": "这是一条示例内容"},
+  {"id": 2, "content": "这是一条含有可疑用语的内容"}
+]
+
+数据库：
+
+[
+  {"violation_level": "中", "category": "营销", "keyword": "夸张用语"},
+  {"violation_level": "低", "category": "广告", "keyword": "可疑广告"}
+]

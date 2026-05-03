@@ -1,0 +1,13 @@
+{
+  "compliance": {
+    "risk_level": "medium",
+    "risk_types": ["marketing"],
+    "evidence_spans": [
+      {"keyword": "free", "start": 12, "end": 16, "category": "marketing", "level": "medium"}
+    ],
+    "references": [{"source": "rules", "platform": "demo"}],
+    "evidence_complete": true,
+    "action_hint": "review"
+  },
+  "quality": {"risk_level": "low", "duplicate_score": 0.1}
+}
