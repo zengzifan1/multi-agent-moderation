@@ -21,6 +21,7 @@ dependencies = [
   "fastapi",
   "uvicorn",
   "pyyaml",
+  "pandas",
 ]
 
 [project.optional-dependencies]

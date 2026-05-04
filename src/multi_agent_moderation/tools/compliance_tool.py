@@ -2,6 +2,7 @@ from pathlib import Path
 import sys
 
 from ..schemas import ModerationItem, ComplianceSignal
+from ..configs import settings
 
 
 def _load_compliance_agent_module() -> bool:

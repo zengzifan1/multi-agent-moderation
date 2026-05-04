@@ -1,0 +1,20 @@
+defaults:
+  output_dir: outputs
+  audit_log_path: outputs/audit_log.jsonl
+  audit_db_path: outputs/audit.db
+  enable_audit: true
+  enable_audit_db: true
+  queue_workers: 2
+  job_db_path: outputs/jobs.db
+  compliance_kb_path: modules/compliance_agent/data/knowledge_base.json
+  compliance_rules_path: modules/compliance_agent/rules/rules.json
+  review_replacement_rules_path: modules/review_agent/data/replacement_rules.json
+  quality_output_path: outputs/quality_dedup.json
+
+profiles:
+  dev:
+    enable_audit_db: false
+    queue_workers: 1
+  prod:
+    enable_audit_db: true
+    queue_workers: 4

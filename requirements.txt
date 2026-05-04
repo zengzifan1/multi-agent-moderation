@@ -7,3 +7,4 @@ langgraph
 fastapi
 uvicorn
 pyyaml
+pandas

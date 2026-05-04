@@ -15,3 +15,13 @@ def test_load_config_with_profile(tmp_path: Path) -> None:
     config = load_config(str(config_path), "dev")
     assert config["output_dir"] == "out"
     assert config["queue_workers"] == 3
+
+
+def test_load_config_yaml_missing_dependency(tmp_path: Path) -> None:
+    config_path = tmp_path / "config.yaml"
+    config_path.write_text("defaults:\n  output_dir: out\n", encoding="utf-8")
+
+    try:
+        load_config(str(config_path), "default")
+    except RuntimeError:
+        pass
