@@ -123,6 +123,10 @@ print(result)
 - 合规模块文档：[modules/compliance_agent/docs/README.md](modules/compliance_agent/docs/README.md)
 - 复核模块文档：[modules/review_agent/docs/README.md](modules/review_agent/docs/README.md)
 
+## Docs
+
+- Overview and API: [docs/INDEX.md](docs/INDEX.md)
+
 ## 目录结构
 
 ```
